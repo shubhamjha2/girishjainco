@@ -690,3 +690,53 @@ function resize_eb_slider() {
       // Open the video URL in a new tab
       window.open(videoUrl, '_blank');
   });
+
+
+  // form
+  $(document).ready(function () {
+    // Function to open the form
+    function openForm() {
+      $(".contact_center_c").show();
+    }
+
+    // Function to close the form
+    function closeForm() {
+      $(".contact_center_c").hide();
+    }
+
+    // Open the form initially
+    openForm();
+
+    // Click event for the "X" button
+    $(".contact-form-cross").click(function () {
+      closeForm();
+    });
+    $("#open-contact-form").click(function (event) {
+      event.preventDefault(); // Prevent the link from navigating
+      openForm(); // Open the contact form
+    });
+
+    // Form submit event
+    $("#contact-form-myForm").on("submit", function (event) {
+      event.preventDefault(); // Prevent reload
+      var formData = new FormData(this);
+      formData.append("service_id", "service_xmth6xu");
+        formData.append("template_id", "template_vrz491k");
+        formData.append("user_id", "rcGJCc8gqzsoBkuyz");
+
+      $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
+        type: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+      })
+        .done(function () {
+          alert("Successful, Thank You!!");
+          closeForm(); // Close the form on successful submission
+        })
+        .fail(function (error) {
+          alert("Oops... " + JSON.stringify(error));
+        });
+    });
+  });
+

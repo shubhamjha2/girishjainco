@@ -1,6 +1,5 @@
 /*------------------------------------------------------------------
-* Project:        Realshield
-* Author:         Bizberg_Themes
+* Project:        girish jain
 * URL:            https://themeforest.net/user/bizberg_themes
 * Created:        01/15/2022
 -------------------------------------------------------------------
@@ -305,7 +304,7 @@
     arrows: false,
     dots: false,
     autoplay: true,
-    speed: 8000,
+    speed: 1000,
     rows: 0,
     loop: true,
     responsive: [

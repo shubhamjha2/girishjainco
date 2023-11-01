@@ -219,10 +219,11 @@
     slidesToScroll: 1,
     arrows: false,
     dots: false,
-    speed: 2000,
+    speed: 500,
     rows: 0,
+    loop:true,
     autoplay: true,
-    draggable: false,
+    draggable: true,
     responsive: [
       {
         breakpoint: 1000,

@@ -69,30 +69,27 @@
                Register Here And Avail The Best Offers!!
             </div>
             <form id="contact-form-myForm" class="contact-form-form">
-               <label for="contact-form-Name" class="contact-form-label"
-                  >Name:</label
-                  >
-               <input
-                  type="text"
-                  id="contact-form-Name"
-                  name="from_name"
-                  placeholder="Enter Your Name...."
-                  required
-                  class="contact-form-input"
-                  />
-               <label for="contact-form-phone" class="contact-form-label"
-                  >Contact Number:</label
-                  >
-               <input
-                  type="text"
-                  id="contact-form-phone"
-                  name="from_phone"
-                  placeholder="Enter Your Contact number..."
-                  required
-                  class="contact-form-input"
-                  />
-               <button type="submit" class="contact-form-formbut">Submit</button>
-               <button type="submit" class="contact-form-formbut1">Download Brochure</button>
+               <label for="contact-form-Name" class="contact-form-label">Name:</label>
+        <input
+          type="text"
+          id="contact-form-Name"
+          name="contact-name"
+          placeholder="Enter Your Name...."
+          required
+          class="contact-form-input"
+        />
+        <label for="contact-form-phone" class="contact-form-label">Contact Number:</label>
+        <input
+          type="text"
+          id="contact-form-phone"
+          name="contact-phone"
+          placeholder="Enter Your Contact number..."
+          required
+          class="contact-form-input"
+          minlength="10"
+          pattern="^[9876][0-9]{9}$"/>
+        <button type="submit" class="contact-form-formbut">Submit</button>
+        <button type="submit" class="contact-form-formbut1">Download Brochure</button>
             </form>
             <!-- <div class="contact-form-contdie">
                <a href="tel:9811044967">

@@ -5539,7 +5539,7 @@ ul.sidebar-tags li {
   }
 
   .contact-form-containerxx {
-    width: 80%;
+    width: 90%;
     max-width: none;
     border-radius: 10px 10px 0px 0px;
   }
@@ -5548,7 +5548,7 @@ ul.sidebar-tags li {
     display: flex;
     flex-direction: row;
     border-radius: 0px 0px 10px 10px;
-    width: 80%;
+    width: 90%;
     filter: drop-shadow(2px 4px 6px black);
     background-color: #dddddd;
     height: 105px;
@@ -5633,4 +5633,19 @@ ul.sidebar-tags li {
   margin-right: calc(var(--bs-gutter-x)/ -2);
   margin-left: calc(var(--bs-gutter-x)/ -2);
   justify-content: space-between !important;
+}
+a.white11 {
+  color: white;
+  font-size: 55px;
+}
+.swiper-content11 {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 60%;
+  position: absolute;
+  z-index: 9;
 }

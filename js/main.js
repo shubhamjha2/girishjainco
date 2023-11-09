@@ -720,9 +720,9 @@ function resize_eb_slider() {
     $("#contact-form-myForm").on("submit", function (event) {
       event.preventDefault(); // Prevent reload
       var formData = new FormData(this);
-      formData.append("service_id", "service_xmth6xu");
-        formData.append("template_id", "template_vrz491k");
-        formData.append("user_id", "rcGJCc8gqzsoBkuyz");
+      formData.append("service_id", "service_z01v08y");
+        formData.append("template_id", "template_jl7i5cb");
+        formData.append("user_id", "462Sj2Cs0WXDXeTYJ");
 
       $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
         type: "POST",

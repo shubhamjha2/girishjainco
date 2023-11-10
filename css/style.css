@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 4px; }
     h1 a:hover, h1 a:focus, h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus, h4 a:hover, h4 a:focus, h5 a:hover, h5 a:focus, h6 a:hover, h6 a:focus {
       text-decoration: none;
-      color: #0a1c1f;
+      color: #FFF;
       transition: all ease-in-out 0.5s;
       outline: none;
       text-decoration: none !important;

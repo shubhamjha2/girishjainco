@@ -221,7 +221,7 @@
     dots: false,
     speed: 500,
     rows: 0,
-    loop:true,
+    loop: true,
     autoplay: true,
     draggable: true,
     responsive: [
@@ -676,67 +676,69 @@ function resize_eb_slider() {
   }
 }
 
+// youtube
+// Get the button element by its ID
+var playButton = document.getElementById("playButton");
 
+// Add a click event listener to the button
+playButton.addEventListener("click", function () {
+  // Get the video URL from the data attribute
+  var videoUrl = playButton.getAttribute("data-video-id");
 
-// youtube  
-  // Get the button element by its ID
-  var playButton = document.getElementById('playButton');
+  // Open the video URL in a new tab
+  window.open(videoUrl, "_blank");
+});
 
-  // Add a click event listener to the button
-  playButton.addEventListener('click', function() {
-      // Get the video URL from the data attribute
-      var videoUrl = playButton.getAttribute('data-video-id');
+// form
+$(document).ready(function () {
+  // Function to open the form
+  function openForm() {
+    $(".contact_center_c").show();
+  }
 
-      // Open the video URL in a new tab
-      window.open(videoUrl, '_blank');
+  // Function to close the form
+  function closeForm() {
+    $(".contact_center_c").hide();
+  }
+
+  // Open the form initially
+  openForm();
+
+  // Click event for the "X" button
+  $(".contact-form-cross").click(function () {
+    closeForm();
+  });
+  $("#open-contact-form").click(function (event) {
+    event.preventDefault(); // Prevent the link from navigating
+    openForm(); // Open the contact form
   });
 
+  // Form submit event
+  $("#contact-form-myForm").on("submit", function (event) {
+    event.preventDefault(); // Prevent reload
+    var formData = new FormData(this);
+    formData.append("service_id", "service_z01v08y");
+    formData.append("template_id", "template_jl7i5cb");
+    formData.append("user_id", "462Sj2Cs0WXDXeTYJ");
 
-  // form
-  $(document).ready(function () {
-    // Function to open the form
-    function openForm() {
-      $(".contact_center_c").show();
-    }
-
-    // Function to close the form
-    function closeForm() {
-      $(".contact_center_c").hide();
-    }
-
-    // Open the form initially
-    openForm();
-
-    // Click event for the "X" button
-    $(".contact-form-cross").click(function () {
-      closeForm();
-    });
-    $("#open-contact-form").click(function (event) {
-      event.preventDefault(); // Prevent the link from navigating
-      openForm(); // Open the contact form
-    });
-
-    // Form submit event
-    $("#contact-form-myForm").on("submit", function (event) {
-      event.preventDefault(); // Prevent reload
-      var formData = new FormData(this);
-      formData.append("service_id", "service_z01v08y");
-        formData.append("template_id", "template_jl7i5cb");
-        formData.append("user_id", "462Sj2Cs0WXDXeTYJ");
-
-      $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
-        type: "POST",
-        data: formData,
-        contentType: false,
-        processData: false,
+    $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
+      type: "POST",
+      data: formData,
+      contentType: false,
+      processData: false,
+    })
+      .done(function () {
+        alert("Successful, Thank You!!");
+        closeForm(); // Close the form on successful submission
       })
-        .done(function () {
-          alert("Successful, Thank You!!");
-          closeForm(); // Close the form on successful submission
-        })
-        .fail(function (error) {
-          alert("Oops... " + JSON.stringify(error));
-        });
-    });
+      .fail(function (error) {
+        alert("Oops... " + JSON.stringify(error));
+      });
   });
+  function autoOpenForm() {
+    openForm();
+  }
 
+  // Set interval to open the form every 30 seconds
+  setInterval(autoOpenForm, 15000);
+});

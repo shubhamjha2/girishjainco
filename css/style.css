@@ -7897,6 +7897,10 @@ ul.sidebar-tags li a:hover {
 }
 
 @media (max-width: 991px) {
+  .white121 {
+    font-size: 30px;
+    line-height: .5 !important;
+}
   .blog-sidebar {
     margin-top: 2rem;
     position: relative;
@@ -7910,7 +7914,9 @@ ul.sidebar-tags li a:hover {
     margin-bottom: 2rem;
   }
 }
-
+a.white121 {
+  color: white;
+}
 @media (max-width: 767px) {
   .blog-single .blog-next a {
     width: 100%;
@@ -7950,6 +7956,11 @@ ul.sidebar-tags li a:hover {
   .single-comments h4 {
     text-align: center;
   }
+  a.white121 {
+    color: white;
+    line-height: 0.5;
+    font-size: 27px;
+}
 }
 
 @media (max-width: 359px) {
@@ -8309,6 +8320,7 @@ ul.sidebar-tags li a:hover {
     max-width: none;
     border-radius: 10px 10px 0px 0px;
   }
+  
 
   .contact-form-brocher {
     display: flex;
@@ -8331,7 +8343,12 @@ ul.sidebar-tags li a:hover {
     top: 22px;
     right: 8px;
   }
-
+  h1.mb2-2 {
+    font-size: 65px;
+    width: 100%;
+    line-height: 0.54;
+}
+  
   .contact-form-conhed {
     font-size: 20px;
     font-weight: bold;

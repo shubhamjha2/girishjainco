@@ -28,6 +28,11 @@ footer {
   padding: 0;
 }
 
+p.white1122.mb-4 {
+  /* color:  white; */
+  /* content-visibility: hidden; */
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -7900,7 +7905,8 @@ ul.sidebar-tags li a:hover {
   .white121 {
     font-size: 30px;
     line-height: .5 !important;
-}
+  }
+
   .blog-sidebar {
     margin-top: 2rem;
     position: relative;
@@ -7914,9 +7920,11 @@ ul.sidebar-tags li a:hover {
     margin-bottom: 2rem;
   }
 }
+
 a.white121 {
   color: white;
 }
+
 @media (max-width: 767px) {
   .blog-single .blog-next a {
     width: 100%;
@@ -7956,11 +7964,12 @@ a.white121 {
   .single-comments h4 {
     text-align: center;
   }
+
   a.white121 {
     color: white;
     line-height: 0.5;
     font-size: 27px;
-}
+  }
 }
 
 @media (max-width: 359px) {
@@ -8320,7 +8329,7 @@ a.white121 {
     max-width: none;
     border-radius: 10px 10px 0px 0px;
   }
-  
+
 
   .contact-form-brocher {
     display: flex;
@@ -8334,6 +8343,7 @@ a.white121 {
 }
 
 
+
 @media (max-width: 428px) {
 
   .contact-form-contdie {
@@ -8343,12 +8353,20 @@ a.white121 {
     top: 22px;
     right: 8px;
   }
+
+  .swiper-content11 {
+
+    width: 87%;
+  }
+
+ 
+
   h1.mb2-2 {
     font-size: 65px;
     width: 100%;
     line-height: 0.54;
-}
-  
+  }
+
   .contact-form-conhed {
     font-size: 20px;
     font-weight: bold;
@@ -8437,7 +8455,7 @@ a.white11 {
   right: 0;
   margin: 0 auto;
   text-align: center;
-  width: 60%;
+  width: 87%;
   position: absolute;
   z-index: 9;
 }

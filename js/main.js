@@ -689,7 +689,59 @@ playButton.addEventListener("click", function () {
   window.open(videoUrl, "_blank");
 });
 
-// form
+// // form
+// $(document).ready(function () {
+//   // Function to open the form
+//   function openForm() {
+//     $(".contact_center_c").show();
+//   }
+
+//   // Function to close the form
+//   function closeForm() {
+//     $(".contact_center_c").hide();
+//   }
+
+//   // Open the form initially
+//   openForm();
+
+//   // Click event for the "X" button
+//   $(".contact-form-cross").click(function () {
+//     closeForm();
+//   });
+//   $("#open-contact-form").click(function (event) {
+//     event.preventDefault(); // Prevent the link from navigating
+//     openForm(); // Open the contact form
+//   });
+
+//   // Form submit event
+//   $("#contact-form-myForm").on("submit", function (event) {
+//     event.preventDefault(); // Prevent reload
+//     var formData = new FormData(this);
+//     formData.append("service_id", "service_z01v08y");
+//     formData.append("template_id", "template_jl7i5cb");
+//     formData.append("user_id", "462Sj2Cs0WXDXeTYJ");
+
+//     $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
+//       type: "POST",
+//       data: formData,
+//       contentType: false,
+//       processData: false,
+//     })
+//       .done(function () {
+//         alert("Successful, Thank You!!");
+//         closeForm(); // Close the form on successful submission
+//       })
+//       .fail(function (error) {
+//         alert("Oops... " + JSON.stringify(error));
+//       });
+//   });
+//   function autoOpenForm() {
+//     openForm();
+//   }
+
+//   // Set interval to open the form every 30 seconds
+//   setInterval(autoOpenForm, 15000);
+// });
 $(document).ready(function () {
   // Function to open the form
   function openForm() {
@@ -701,13 +753,27 @@ $(document).ready(function () {
     $(".contact_center_c").hide();
   }
 
-  // Open the form initially
-  openForm();
+  // Function to check if the form has been filled (using a cookie)
+  function isFormFilled() {
+    return document.cookie.indexOf("formFilled=true") !== -1;
+  }
+
+  // Function to set a cookie indicating the form has been filled
+  function setFormFilled() {
+    document.cookie = "formFilled=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+  }
+
+  // Open the form initially only if it hasn't been filled
+  if (!isFormFilled()) {
+    openForm();
+  }
 
   // Click event for the "X" button
   $(".contact-form-cross").click(function () {
     closeForm();
   });
+
+  // Click event for opening the form
   $("#open-contact-form").click(function (event) {
     event.preventDefault(); // Prevent the link from navigating
     openForm(); // Open the contact form
@@ -728,17 +794,25 @@ $(document).ready(function () {
       processData: false,
     })
       .done(function () {
-        alert("Successful, Thank You!!");
+        // alert("Successful, Thank You!!");
         closeForm(); // Close the form on successful submission
+        setFormFilled(); // Set the cookie to indicate the form has been filled
+
+        // Redirect to thank_you.html
+        window.open("thank_you.html", "_blank");
       })
       .fail(function (error) {
         alert("Oops... " + JSON.stringify(error));
       });
   });
+
+  // Function to auto-open the form (if it hasn't been filled)
   function autoOpenForm() {
-    openForm();
+    if (!isFormFilled()) {
+      openForm();
+    }
   }
 
   // Set interval to open the form every 30 seconds
-  setInterval(autoOpenForm, 15000);
+  setInterval(autoOpenForm, 10000);
 });

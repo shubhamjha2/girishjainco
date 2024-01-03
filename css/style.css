@@ -270,6 +270,13 @@ img {
   background: #f1f1f1 !important;
 }
 
+.imggrish {
+  height: 110px;
+  position: fixed;
+  width: 238px;
+  top: 7px;
+}
+
 .bg-lgrey {
   background: #fbfbfb !important;
 }
@@ -8149,6 +8156,14 @@ a.white121 {
   .home-search .main-slider-1 .main-slider-inner .form-content .search-tabs li i {
     float: none;
   }
+
+  .imggrish {
+    height: 91px;
+    position: fixed;
+    width: 186px;
+    object-fit: fill;
+    top: 3px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
@@ -8250,8 +8265,7 @@ a.white121 {
 
 .imagelg {
   width: 100%;
-  margin-bottom: 17px;
-  text-align: left;
+  margin-bottom: 62px;
 }
 
 .contact-form-cross {
@@ -8307,6 +8321,7 @@ a.white121 {
   .contact-form-brocher {
     height: 434px;
   }
+
 }
 
 /* 
@@ -8359,7 +8374,7 @@ a.white121 {
     width: 87%;
   }
 
- 
+
 
   h1.mb2-2 {
     font-size: 65px;

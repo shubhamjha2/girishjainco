@@ -814,5 +814,5 @@ $(document).ready(function () {
   }
 
   // Set interval to open the form every 30 seconds
-  setInterval(autoOpenForm, 10000);
+  // setInterval(autoOpenForm, 10000);
 });
